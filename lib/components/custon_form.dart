@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:login_app/components/custom_text_form_field.dart';
+import 'package:login_app/size.dart';
 
 class CustomForm extends StatelessWidget {
   final _formKey = GlobalKey<FormState>();
@@ -11,7 +12,10 @@ class CustomForm extends StatelessWidget {
       key: _formKey,
       child: Column(
         children: [
-          CustomTextFormField(),
+          CustomTextFormField(text: "Email"),
+          SizedBox(height: medium_gap),
+          CustomTextFormField(text: "Password"),
+          SizedBox(height: large_gap),
           TextButton(
             onPressed: () {
               if (_formKey.currentState!.validate()) {

@@ -14,6 +14,17 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     //context는 MyApp의 하위위젯으로 context를 상속
     return MaterialApp(
+      theme: ThemeData(
+        textButtonTheme: TextButtonThemeData(
+          style: TextButton.styleFrom(
+              backgroundColor: Colors.black,
+              primary: Colors.white,
+              shape: RoundedRectangleBorder(
+                borderRadius: BorderRadius.circular(30),
+              ),
+              minimumSize: Size(400, 60)),
+        ),
+      ),
       debugShowCheckedModeBanner: false,
       initialRoute: "/login",
       routes: {
